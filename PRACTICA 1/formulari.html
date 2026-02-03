@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRACTICA 1</title>
+</head>
+
+<body style="background-color: aliceblue;">
+  <header>
+    <h1>Blanes Developers Conference 2025</h1>
+  </header>
+  <main>
+    <form> <!--Aqui dentro va algo para recojer los datos introducidos pero no tengo ni idea de que-->
+      <!-- SECCIÓ 1: Dades de l'usuari -->
+      <fieldset>
+        <legend>Dades de l'usuari</legend>
+        <div>
+          <label for="nom">Nom*:</label>
+          <input type="text" id="nom" name="nom" required placeholder="Escriu el teu nom" autofocus
+            pattern="[A-Za-zÀ-ÿ\s]+">
+        </div>
+        <div><label for="cognoms">Cognoms*:</label>
+          <input type="text" id="cognoms" name="cognoms" required placeholder="Escriu els teus cognoms"
+            pattern="[A-Za-zÀ-ÿ\s]+">
+        </div>
+
+        <div>
+          <label for="nif">NIF*:</label>
+          <input type="text" id="nif" name="nif" required placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]">
+        </div>
+        <div>
+          <label for="data_naixement">Data de naixement:</label>
+          <input type="date" id="data_naixement" name="data_naixement">
+        </div>
+
+        <div>
+          <label for="fotografia">Fotografia (jpg/png):</label>
+          <input type="file" id="fotografia" name="fotografia" accept=".jpg,.jpeg,.png">
+        </div>
+        <div> Sexe:
+          <input type="radio" id="home" name="sexe" value="home">
+          <label for="home">Home</label>
+          <input type="radio" id="dona" name="sexe" value="dona">
+          <label for="dona">Dona</label>
+          <input type="radio" id="altres" name="sexe" value="altres">
+          <label for="altres">Altres</label>
+        </div>
+
+        <div>
+          <label for="adreca">Adreça:</label>
+          <input type="text" id="adreca" name="adreca" placeholder="Carrer, número, ciutat">
+        </div>
+        <div>
+          <label for="telefon">Telèfon:</label>
+          <input type="tel" id="telefon" name="telefon" placeholder="123456789" pattern="[0-9]{9}">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="exemple@domini.com">
+        </div>
+        <div>Llenguatges que domines:</div>
+        <input type="checkbox" id="js" name="llenguatges[]" value="JavaScript">
+        <label for="js">JavaScript</label>
+        <input type="checkbox" id="python" name="llenguatges[]" value="Python">
+        <label for="python">Python</label>
+        <input type="checkbox" id="java" name="llenguatges[]" value="Java">
+        <label for="java">Java</label>
+        <input type="checkbox" id="csharp" name="llenguatges[]" value="C#">
+        <label for="csharp">C#</label>
+        <input type="checkbox" id="php" name="llenguatges[]" value="PHP">
+        <label for="php">PHP</label>
+
+      </fieldset>
+
+      <!-- SECCIÓ 2: Dades de la inscripció -->
+      <fieldset>
+        <legend>Selecciona on vols inscriure't</legend>
+
+        <table border="1" cellpadding="5">
+          <thead>
+            <tr>
+              <th>HORA</th>
+              <th>Dilluns</th>
+              <th>Dimarts</th>
+              <th>Dimecres</th>
+              <th>Dijous</th>
+              <th>Divendres</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:30-10:30</td>
+              <td>
+                <select name="dilluns">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dimarts">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dimecres">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dijous">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="divendres">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>10:30-13:30</td>
+              <td>
+                <select name="dilluns">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dimarts">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dimecres">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dijous">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="divendres">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>14:00-16:00</td>
+             <td>
+                <select name="dilluns">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dimarts">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dimecres">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="dijous">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+              <td>
+                <select name="divendres">
+                  <option value="frontend">frontend</option>
+                  <option value="backend">backend</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </fieldset>
+      <!-- Botó d'enviament amb imatge -->
+      <input type="image" src="./imatges/enviar.png" alt="Envia el formulari" width="80" height="80">
+      <div><button type="reset">Esborrar</button></div>
+    </form>
+    <section>
+      <div><a href="inici.html">Torna al inici</a></div>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ca">
+<!-- el color de la pagina es #2B4747 htmlcolorcodes-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA 2</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            /* El body ocupa toda la pantalla */
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #FEE7E7;
+        }
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #6F0606;
+        }
+
+        h1 {
+            color: #440404;
+        }
+
+        footer {
+            background-color: rgba(68, 4, 4, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1px 0;
+            font-size: 8px;
+            width: 100%;
+            margin-top: auto;
+            /* empuja el footer al fondo */
+        }
+
+        main {
+            flex: 1;
+            /* Ocupa todo el espacio disponible */
+        }
+
+        header {
+            /* Cambia a tu color deseado */
+            background: linear-gradient(to bottom,
+                    rgba(171, 0, 0, 0.8),
+                    rgba(146, 0, 0, 0.5),
+                    rgba(68, 4, 4, 0.4));
+            color: white;
+            /* Color del texto */
+            text-align: center;
+            padding: 1 0;
+            position: sticky;
+            /* Hace que el header sea “pegajoso” */
+            top: 0;
+            /* Se pega al top cuando llega */
+            z-index: 1000;
+            /* Se asegura que esté por encima del contenido */
+        }
+    </style>
+</head>
+
+<body style="background-color:#FEE7E7;" link="black" vlink="black" alink="gray">
+    <header>
+        <nav>
+        <table align="center" cellpadding="25" width="80%">
+            <tbody>
+                <tr>
+                    <td align="center"><a href="inici.html"><b>
+                                <font color="white">Inici</font>
+                            </b></a></td>
+                    <td align="center"><a href="director.html"><b>
+                                <font color="white">Director</font>
+                            </b></a></td>
+                    <td align="center"><a href="personatges.html"><b>
+                                <font color="white">Personatges</font>
+                            </b></a></td>
+                    <td align="center"><a href="cinemes.html"><b>
+                                <font color="white">Cinemes/Streaming</font>
+                            </b></a></td>
+                    <td align="center"><a href="media.html"><b>
+                                <font color="white">Media</font>
+                            </b></a></td>
+                    <td align="center"><a href="opinio.html"><b>
+                                <font color="white">Opinió</font>
+                            </b></a></td>
+                    <td align="center"><a href="links.html"><b>
+                                <font color="white">Links i hiperlinks</font>
+                            </b></a></td>
+                    <td align="center"><a href="altres.html"><b>
+                                <font color="white">Contacta</font>
+                            </b></a></td>
+                </tr>
+            </tbody>
+        </table>
+        </nav>
+    </header>
+    <main>
+        <div style="max-width: 900px; margin: 0 auto; text-align:center;">
+            <section>
+                <article>
+                    <h2>Fernando Díaz</h2>
+                    <figure>
+                        <img src="/PRACTICA2/imatges/fernando.png" alt="fernando_diaz" width="200px">
+                        <figcaption>Fernando Diaz</figcaption>
+                        <details>
+                            <summary>Desplegar personatge</summary>
+                            <p>
+                                Fernando Tejero interpreta al personatge de Fernando Díaz. Fernando és el típic noi
+                                sense
+                                cap
+                                mena d'ambició pel futur, que treballa en un supermercat de barri com a reposador de
+                                prestatgeries i productes. En el seu temps lliure és el porter suplent d'un equip de
+                                futbol
+                                de
+                                Tercera Regional i no ha jugat ni un minut en tota la temporada. Està enamorat de la
+                                filla
+                                del
+                                seu entrenador, Cecilia. Té una germana tan perduda com ell, amb la qual viu i discuteix
+                                constantment, però en el fons el que vol és el millor per a ella. Al principi ningú li
+                                para
+                                esment, però quan és ell el que ha de parar el penal tots es bolquen en el seu benestar,
+                                cosa de
+                                la que Fernando s'aprofita de manera subtil.
+                            </p>
+                        </details>
+                </article>
+                <article>
+                    <h2>Celia</h2>
+                    <figure>
+                        <img src="/PRACTICA2/imatges/500px-Marta_Larralde_en_la_inauguración_de_la_tienda_de_Hispanitas_en_Madrid_(30558825516)_(cropped).jpg"
+                            alt="celia" width="200px">
+                        <figcaption>Celia</figcaption>
+                        <details>
+                            <summary>Desplegar personatge</summary>
+                            <p>
+                                Cecilia És la filla de Santos (l'entrenador de l'equip) i manté una relació amorosa amb
+                                el
+                                porter titular (Román). Al principi menysprea a Fernando però a poc a poc comença a
+                                agafar-li afecte gràcies a que la fa riure i al seu bon cor. És amiga d' Ana i confia en
+                                ella, a més són companyes de treball en el bar del barri.
+                            </p>
+                        </details>
+                </article>
+                <article>
+                    <h2>Ana Díaz</h2>
+                    <figure>
+                        <img src="/PRACTICA2/imatges/María_Botto.jpg" alt="ana_diaz" width="300px">
+                        <figcaption>Ana Díaz</figcaption>
+                        <details>
+                            <summary>Desplegar personatge</summary>
+                            <p>
+                                María Botto interpreta al personatge de Ana Díaz. És la germana de Fernando i amiga de
+                                Cecilia. Manté una relació amorosa amb Khaled, encara que no acaba de ser feliç amb
+                                aquest i
+                                comença a sortir amb Santos, contra la voluntat del seu germà. Treballa en el bar del
+                                barri
+                                amb Cecilia.
+                            </p>
+                        </details>
+                </article>
+                <article>
+                    <h2>Santos</h2>
+                    <figure>
+                        <img src="/PRACTICA2/imatges/carlos.jpg" alt="santos" width="200px">
+                        <figcaption>Santos</figcaption>
+                        <details>
+                            <summary>Desplegar personatge</summary>
+                            <p>
+                                Carlos Kaniowsky interpreta al personatge de Santos. Santos és l'entrenador del Estrella
+                                Polar, sofreix i es desviu pel seu treball i l'equip. Confia cegament en Román i gens en
+                                Fernando. Està solter, és el pare de Cecilia i intenta convèncer-la perquè surti amb
+                                Fernando i que aquest estigui motivat per a parar el penal.
+                            </p>
+                        </details>
+                </article>
+                <article>
+                    <h2>Roman</h2>
+                    <figure>
+                        <img src="/PRACTICA2/imatges/benito.webp" alt="roman" width="200px">
+                        <figcaption>Roman</figcaption>
+                        <details>
+                            <summary>Desplegar personatge</summary>
+                            <p>
+                                Benito Sagredo interpreta Román. És el porter titular de l'equip, alguns equips grans li
+                                han
+                                tirat l'ull, però el Estrella Polar no el ven perquè és l'estrella. Vol a l'equip i es
+                                desviu per ell. És cregut i estiratge i manté una relació sentimental amb Cecilia. En la
+                                seva relació és gelós i possessiu. Comença a tenir gelosia de Fernando quan Cecilia surt
+                                amb
+                                ell per a motivar-lo.
+                            </p>
+                        </details>
+                </article>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <p>© 2005 EL PENALTI MAS LARGO DEL MUNDO</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ca">
+<!-- el color de la pagina es #2B4747 htmlcolorcodes-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA 2</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            /* El body ocupa toda la pantalla */
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #FEE7E7;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #6F0606;
+        }
+
+        h1 {
+            color: #440404;
+        }
+
+        footer {
+            background-color: rgba(68, 4, 4, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1px 0;
+            font-size: 8px;
+            width: 100%;
+            margin-top: auto;
+            /* empuja el footer al fondo */
+        }
+
+        main {
+            flex: 1;
+            /* Ocupa todo el espacio disponible */
+        }
+
+        header {
+            /* Cambia a tu color deseado */
+            background: linear-gradient(to bottom,
+                    rgba(171, 0, 0, 0.8),
+                    rgba(146, 0, 0, 0.5),
+                    rgba(68, 4, 4, 0.4));
+            color: white;
+            /* Color del texto */
+            text-align: center;
+            padding: 1 0;
+            position: sticky;
+            /* Hace que el header sea “pegajoso” */
+            top: 0;
+            /* Se pega al top cuando llega */
+            z-index: 1000;
+            /* Se asegura que esté por encima del contenido */
+        }
+    </style>
+</head>
+
+<body style="background-color:#FEE7E7;" link="black" vlink="black" alink="gray">
+    <header>
+
+        <table align="center" cellpadding="25" width="80%">
+            <tbody>
+                <tr>
+                    <td align="center"><a href="inici.html"><b>
+                                <font color="white">Inici</font>
+                            </b></a></td>
+                    <td align="center"><a href="director.html"><b>
+                                <font color="white">Director</font>
+                            </b></a></td>
+                    <td align="center"><a href="personatges.html"><b>
+                                <font color="white">Personatges</font>
+                            </b></a></td>
+                    <td align="center"><a href="cinemes.html"><b>
+                                <font color="white">Cinemes/Streaming</font>
+                            </b></a></td>
+                    <td align="center"><a href="media.html"><b>
+                                <font color="white">Media</font>
+                            </b></a></td>
+                    <td align="center"><a href="opinio.html"><b>
+                                <font color="white">Opinió</font>
+                            </b></a></td>
+                    <td align="center"><a href="links.html"><b>
+                                <font color="white">Links i hiperlinks</font>
+                            </b></a></td>
+                    <td align="center"><a href="altres.html"><b>
+                                <font color="white">Contacta</font>
+                            </b></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2 align="center">TAULA DE PREUS</h2>
+                <table border="1" cellpadding="30" align="center">
+                    <colgroup>
+                        <!-- Te permite cambiar cualquier aspecto de una columna -->
+                        <col bgcolor="#99C2C2">
+                    </colgroup>
+                    <thead bgcolor="#1B2D2D">
+                        <!-- Encabezado de la tabla-->
+                        <tr>
+                            <!--Fila-->
+                            <th colspan="4">
+                                <font color="white">EL PENALTI MAS LARGO DEL MUNDO</font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr bgcolor="#4E8383">
+                            <th>
+                                PLATAFORMA DE STREAMING
+                            </th>
+                            <th>PREU</th>
+                            <th>FORMAT</th>
+                            <th>VALORACIÓ</th>
+                        </tr>
+                        <tr>
+                            <th><img src="./imatges/flixole.png" alt="flixole" width="100px"></th>
+                            <th>3,99€/mes</th>
+                            <th>CC/HD</th>
+                            <th>4.70</th>
+                        </tr>
+                        <tr>
+                            <th><img src="./imatges/logo movistar.png" alt="flixole" width="100px"></th>
+                            <th>19,99€/mes</th>
+                            <th>CC/HD</th>
+                            <th>4.20</th>
+                        </tr>
+                        <tr>
+                            <th><img src="./imatges/Amazon_Prime_Video_logo.svg.png" alt="flixole" width="100px"></th>
+                            <th>3,99€/mes</th>
+                            <th>CC/HD</th>
+                            <th>4.40</th>
+                        </tr>
+                        <tr>
+                            <th><img src="./imatges/livify.png" alt="flixole" width="100px"></th>
+                            <th>2,99€/mes</th>
+                            <th>CC/HD</th>
+                            <th>4.70</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© 2005 EL PENALTI MAS LARGO DEL MUNDO</p>
+    </footer>
+</body>
+
+</html>

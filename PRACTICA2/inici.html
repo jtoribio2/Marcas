@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ca">
+<!-- el color de la pagina es #2B4747 htmlcolorcodes-->
+
+<head>
+   	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>PRACTICA 2</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            /* El body ocupa toda la pantalla */
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #FEE7E7;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #6F0606;
+        }
+
+        h1 {
+            color: #440404;
+        }
+
+        footer {
+            background-color: rgba(68, 4, 4, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1px 0;
+            font-size: 8px;
+            width: 100%;
+            margin-top: auto;
+            /* empuja el footer al fondo */
+        }
+
+        main {
+            flex: 1;
+            /* Ocupa todo el espacio disponible */
+        }
+
+        header {
+            /* Cambia a tu color deseado */
+            background: linear-gradient(to bottom,
+                    rgba(171, 0, 0, 0.8),
+                    rgba(146, 0, 0, 0.5),
+                    rgba(68, 4, 4, 0.4));
+            color: white;
+            /* Color del texto */
+            text-align: center;
+            padding: 1 0;
+            position: sticky;
+            /* Hace que el header sea “pegajoso” */
+            top: 0;
+            /* Se pega al top cuando llega */
+            z-index: 1000;
+            /* Se asegura que esté por encima del contenido */
+        }
+    </style>
+</head>
+
+<body style="background-color:#FEE7E7;" link="black" vlink="black" alink="gray">
+    <header>
+
+        <table align="center" cellpadding="25" width="80%">
+            <tbody>
+                <tr>
+                    <td align="center"><a href="inici.html"><b>
+                                <font color="white">Inici</font>
+                            </b></a></td>
+                    <td align="center"><a href="director.html"><b>
+                                <font color="white">Director</font>
+                            </b></a></td>
+                    <td align="center"><a href="personatges.html"><b>
+                                <font color="white">Personatges</font>
+                            </b></a></td>
+                    <td align="center"><a href="cinemes.html"><b>
+                                <font color="white">Cinemes/Streaming</font>
+                            </b></a></td>
+                    <td align="center"><a href="media.html"><b>
+                                <font color="white">Media</font>
+                            </b></a></td>
+                    <td align="center"><a href="opinio.html"><b>
+                                <font color="white">Opinió</font>
+                            </b></a></td>
+                    <td align="center"><a href="links.html"><b>
+                                <font color="white">Links i hiperlinks</font>
+                            </b></a></td>
+                    <td align="center"><a href="altres.html"><b>
+                                <font color="white">Contacta</font>
+                            </b></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+    <main>
+        <article>
+            <figure align="center">
+                <img src="./imatges/inicio.jpg" alt="foto1" width="900px">
+            </figure>
+        </article>
+        <div style="max-width: 900px; margin: 0 auto; text-align:justify;">
+            <section>
+                <article>
+                    <h2>SINOPSIS</h2>
+                    <p>
+                        Fernando (Fernando Tejero) és el porter suplent d'un equip de Tercera Regional anomenat Estrella
+                        Polar. No ha jugat un sol minut en tota la temporada, però durant l'últim partit de la lliga, en
+                        el
+                        qual el seu equip va guanyant per un gol a zero i es juguen l'ascens a Segona Regional, el
+                        porter
+                        titular es lesiona i <section>l'àrbitre pita</section> un penal en contra del seu equip. En aquest moment arriba
+                        l'oportunitat de Fernando, el qual és l'encarregat de parar el penal. Just en el moment en el
+                        qual
+                        el jugador de l'equip contrari es disposa a llançar-lo, uns seguidors descontrolats i molestos
+                        amb
+                        la decisió del col·legiat, salten al terreny de joc i el partit és suspès. Es resoldrà la
+                        setmana
+                        següent en el mateix camp, sense públic i amb els mateixos jugadors. Això implica que Fernando
+                        és
+                        l'encarregat d'intentar parar el penal i té una setmana per a preparar-se. Si aconsegueix
+                        parar-ho,
+                        el seu equip ascendirà a Segona Regional per primera vegada en tota la seva història.
+                    </p>
+                </article>
+
+                <article>
+                    <h2>ANY D'ESTRENA</h2>
+                    <p>9 de març 2005</p>
+                </article>
+
+                <article>
+                    <h2>DURADA</h2>
+                    <p>100 min</p>
+                </article>
+
+                <article>
+                    <h2>GENERE</h2>
+                    <p>Comedia</p>
+                </article>
+
+                <article>
+                    <h2>LLOC DE LA NARRACÍO</h2>
+                    <p>Madrid</p>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>© 2005 EL PENALTI MAS LARGO DEL MUNDO</p>
+    </footer>
+    	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
