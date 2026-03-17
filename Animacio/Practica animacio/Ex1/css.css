@@ -1,0 +1,125 @@
+div {
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    background: rgb(58, 8, 196);
+    position: relative;
+}
+
+.quadrat1:hover {
+    transform: scale(1.5, 1.5) skew(-15deg);
+
+}
+
+.quadrat4:hover {
+    transform: rotate(45deg);
+
+}
+
+.quadrat5:hover {
+    transform: translate3d(50px, 20px, 30px);
+
+}
+
+.quadrat2 {
+    transition: border-radius 1s;
+}
+
+.quadrat6 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 1s ease-out;
+}
+
+
+.quadrat2:hover {
+    border-radius: 50px;
+}
+
+.quadrat6:hover {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%, 50% 0%);
+}
+
+.quadrat3:hover {
+    animation-name: quadrat;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+.quadrat7:hover {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%,
+            0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    animation-name: quadrat2;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes quadrat {
+    from {
+        transform: skew(0deg);
+    }
+
+    10% {
+        transform: skew(45deg);
+    }
+
+    20% {
+        transform: skew(0deg);
+    }
+
+    30% {
+        transform: skewY(45deg);
+    }
+
+    40% {
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform: skew(-45deg);
+    }
+
+    60% {
+        transform: skew(0deg);
+    }
+
+    70% {
+        transform: skewY(-45deg);
+    }
+
+    80% {
+        transform: skewY(0deg);
+    }
+
+    to {
+        transform: skew(0deg);
+    }
+}
+
+@keyframes quadrat2 {
+
+    0% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%,
+                0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    }
+
+    25% {
+        clip-path: polygon(50% 0%, 50% 0%, 0% 100%, 0% 100%, 100% 100%,
+                100% 100%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+
+    50% {
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%,
+                50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+
+    75% {
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+                50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%,
+                0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    }
+}
