@@ -1,0 +1,205 @@
+ELEMENTOS:
+- cotxes (arrel)
+- nous
+- usats
+- cotxe
+
+ATRIBUTS:
+- marca
+- model
+- color
+
+CONTENIDO:
+- matrícula o texto dentro de <cotxe>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<cotxes>
+  <cotxe marca="seat" model="ibiza" color="blau" usat="false">T-8976-AW</cotxe>
+  <cotxe marca="opel" model="corsa" color="blanc" usat="false">Sense Matricular</cotxe>
+  <cotxe marca="renault" model="megane" color="gris" usat="true">1111BCC</cotxe>
+  <cotxe marca="opel" model="corsa" color="blanc" usat="true">9344BDF</cotxe>
+</cotxes>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<cotxes>
+  <nous>
+    <cotxe>
+      <marca>seat</marca>
+      <model>ibiza</model>
+      <color>blau</color>
+      <matricula>T-8976-AW</matricula>
+    </cotxe>
+    <cotxe>
+      <marca>opel</marca>
+      <model>corsa</model>
+      <color>blanc</color>
+      <matricula>Sense Matricular</matricula>
+    </cotxe>
+  </nous>
+  <usats>
+    <cotxe>
+      <marca>renault</marca>
+      <model>megane</model>
+      <color>gris</color>
+      <matricula>1111BCC</matricula>
+    </cotxe>
+    <cotxe>
+      <marca>opel</marca>
+      <model>corsa</model>
+      <color>blanc</color>
+      <matricula>9344BDF</matricula>
+    </cotxe>
+  </usats>
+</cotxes>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<memos>
+  <memo lang="cat">
+    <to>Joan</to>
+    <from>Carme</from>
+    <cc></cc>
+    <subject>Capitol 1: XML Interchange Format</subject>
+  </memo>
+
+  <memo>
+    <to>Carme</to>
+    <subject>Capítol 2: JSON Interchange Format</subject>
+  </memo>
+</memos>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<smartphones>
+  <smartphone>
+    <model>iPhone 15</model>
+    <sistemaOperatiu>
+      <nom>iOS</nom>
+      <versio>17</versio>
+    </sistemaOperatiu>
+    <dimensions>
+      <amplada>71.6</amplada>
+      <alcada>147.6</alcada>
+      <fons>7.8</fons>
+    </dimensions>
+    <pes>171g</pes>
+    <resolucio>2556x1179</resolucio>
+    <processador>A16</processador>
+    <memoria>128GB</memoria>
+    <preu>959</preu>
+  </smartphone>
+
+  <smartphone>
+    <model>Samsung S23</model>
+    <sistemaOperatiu>
+      <nom>Android</nom>
+      <versio>13</versio>
+    </sistemaOperatiu>
+    <dimensions>
+      <amplada>70.9</amplada>
+      <alcada>146.3</alcada>
+      <fons>7.6</fons>
+    </dimensions>
+    <pes>168g</pes>
+    <resolucio>2340x1080</resolucio>
+    <processador>Snapdragon 8</processador>
+    <memoria>256GB</memoria>
+    <preu>909</preu>
+  </smartphone>
+</smartphones>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<music>
+  <llista>
+    <nom>Top Hits</nom>
+    <dataCreacio>2024-01-10</dataCreacio>
+    <canco>
+      <track>1</track>
+      <titol>Peace&amp;War</titol>
+      <autor>Artist1</autor>
+      <durada>3:45</durada>
+    </canco>
+    <canco>
+      <track>2</track>
+      <titol>Sky High</titol>
+      <autor>Artist2</autor>
+      <durada>4:10</durada>
+    </canco>
+  </llista>
+
+  <llista>
+    <nom>Chill</nom>
+    <dataCreacio>2024-02-01</dataCreacio>
+    <canco>
+      <track>1</track>
+      <titol>Relax</titol>
+      <autor>Artist3</autor>
+      <durada>2:50</durada>
+    </canco>
+    <canco>
+      <track>2</track>
+      <titol>Ocean</titol>
+      <autor>Artist4</autor>
+      <durada>3:20</durada>
+    </canco>
+  </llista>
+</music>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<games>
+  <joc>
+    <codi>G1</codi>
+    <nom>FIFA 24</nom>
+    <versio>1.0</versio>
+    <companyia>EA</companyia>
+    <any>2024</any>
+    <exemplars>
+      <exemplar>1</exemplar>
+      <exemplar>2</exemplar>
+      <exemplar>3</exemplar>
+    </exemplars>
+  </joc>
+
+  <joc>
+    <codi>G2</codi>
+    <nom>Call of Duty</nom>
+    <versio>2.0</versio>
+    <companyia>Activision</companyia>
+    <any>2023</any>
+    <exemplars>
+      <exemplar>4</exemplar>
+      <exemplar>5</exemplar>
+      <exemplar>6</exemplar>
+    </exemplars>
+  </joc>
+
+  <soci>
+    <dni>12345678A</dni>
+    <nom>Joan Perez</nom>
+    <telefon>600123123</telefon>
+  </soci>
+
+  <prestec>
+    <exemplar>1</exemplar>
+    <soci>12345678A</soci>
+    <dataPrestec>2024-03-01</dataPrestec>
+    <dataDevolucio>2024-03-10</dataDevolucio>
+  </prestec>
+</games>
+
+<!--a) -->
+ Un namespace és un mecanisme per evitar conflictes de noms en XML.
+
+<!--b) -->
+- Namespace per defecte: no té prefix
+- Namespace explícit: té prefix (ex: treb:)
+
+S’utilitza:
+- Per defecte: quan tot és del mateix tipus
+- Explícit: quan hi ha diferents tipus de dades
+
+<!--c) -->
+L’exemple utilitza:
+- treb: per treballadors
+- add: per adreces
+- dep: per departaments
+
+Serveix per diferenciar etiquetes iguals com <codi> segons el context.
