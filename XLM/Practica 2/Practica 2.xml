@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+  <!-- EXERCICI 1 -->
+
+
+  <!-- Tipo nombrado para web -->
+  <xs:simpleType name="webType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- Elemento raíz biblioteca -->
+  <xs:element name="biblioteca">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!-- Elemento web -->
+        <xs:element name="web" type="webType" minOccurs="0"/>
+
+        <!-- Lista de libros -->
+        <xs:element name="llibre" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- Autor (máx 50 chars) -->
+              <xs:element name="autor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Título (máx 50 chars) -->
+              <xs:element name="titol">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+
+            <!-- Atributo codi (1-9999) -->
+            <xs:attribute name="codi" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="1"/>
+                  <xs:maxInclusive value="9999"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+            <!-- Atributo ubicacio con patrón -->
+            <xs:attribute name="ubicacio" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="prestatge (1[0-4]|[1-9])"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+
+  <!-- EXERCICI 2 -->
+
+
+  <xs:element name="taula_periodica">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="atom" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="nom" type="xs:string"/>
+
+              <!-- Símbolo (máx 3 chars, primera mayúscula) -->
+              <xs:element name="simbol">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3"/>
+                    <xs:pattern value="[A-Z][a-z]{0,2}"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="numero_atomic" type="xs:integer"/>
+              <xs:element name="pes_atomic" type="xs:decimal"/>
+
+              <!-- Punto de ebullición -->
+              <xs:element name="punt_ebullicio">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:decimal">
+                      <xs:attribute name="unitats" default="centigrads">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:enumeration value="centigrads"/>
+                            <xs:enumeration value="kelvin"/>
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:attribute>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+              <!-- Densidad -->
+              <xs:element name="densitat">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:decimal">
+                      <xs:attribute name="unitats" type="xs:string"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+
+            <!-- Atributo estado -->
+            <xs:attribute name="estat" use="required">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="solid"/>
+                  <xs:enumeration value="liquid"/>
+                  <xs:enumeration value="gas"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

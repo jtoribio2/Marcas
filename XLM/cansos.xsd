@@ -1,0 +1,37 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+
+  <xs:element name="music"> <!--esto es la arrel o el node prinsipal --> 
+    <xs:complexType>  <!--indica que hay otras etiquetas dentro de la siguiente   -->
+      <xs:sequence> <!-- marca el orden de los elementos que tienen que dentro de esa etiqueta -->
+        <xs:element name="llista" maxOccurs="unbounded">  <!--el maxOccurs marca la cantidad de elementos que puedo encontrar -->
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom" type="xs:string"/> <!-- el type marca el tipo de dada que tiene -->
+
+              <xs:element name="dataCreacio" type="xs:date"/>
+
+              <xs:element name="canço" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="track" type="xs:int"/>
+                    <xs:element name="titol" type="xs:string"/>
+                    <xs:element name="autor" type="xs:string"/>
+                    <xs:element name="durada" type="xs:string"/>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
