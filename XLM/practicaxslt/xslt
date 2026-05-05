@@ -1,0 +1,137 @@
+Exercici 1
+
+1.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<departments>
+<xsl:for-each select="//department/title">
+<title><xsl:value-of select="."/></title>
+</xsl:for-each>
+</departments>
+</xsl:template>
+</xsl:stylesheet>
+
+2.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<departments>
+<xsl:for-each select="//department">
+<department>
+<title><xsl:value-of select="title"/></title>
+<xsl:copy-of select="chair"/>
+</department>
+</xsl:for-each>
+</departments>
+</xsl:template>
+</xsl:stylesheet>
+
+3.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<courses>
+<xsl:for-each select="//department[@code='EE']/course">
+<course>
+<xsl:attribute name="number">
+<xsl:value-of select="number"/>
+</xsl:attribute>
+<xsl:attribute name="title">
+<xsl:value-of select="title"/>
+</xsl:attribute>
+<description><xsl:value-of select="description"/></description>
+<xsl:for-each select="instructors/instructor/last_name">
+<instructor><xsl:value-of select="."/></instructor>
+</xsl:for-each>
+</course>
+</xsl:for-each>
+</courses>
+</xsl:template>
+</xsl:stylesheet>
+
+
+Exercici 2
+
+1.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<countries>
+<xsl:copy-of select="//country[@area >= 2000 and @area <= 10000]"/>
+</countries>
+</xsl:template>
+</xsl:stylesheet>
+
+2.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<countries>
+<xsl:for-each select="//country">
+<country>
+<xsl:attribute name="languages">
+<xsl:value-of select="count(language)"/>
+</xsl:attribute>
+<xsl:attribute name="cities">
+<xsl:value-of select="count(city)"/>
+</xsl:attribute>
+<name><xsl:value-of select="name"/></name>
+<population><xsl:value-of select="population"/></population>
+</country>
+</xsl:for-each>
+</countries>
+</xsl:template>
+</xsl:stylesheet>
+
+3.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<countries>
+<xsl:for-each select="//country[language[ends-with(., 'ian')]]">
+<country>
+<name><xsl:value-of select="name"/></name>
+<xsl:for-each select="language[ends-with(., 'ian')]">
+<language><xsl:value-of select="."/></language>
+</xsl:for-each>
+</country>
+</xsl:for-each>
+</countries>
+</xsl:template>
+</xsl:stylesheet>
+
+4.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<countries>
+<xsl:for-each select="//country[count(language) > 3]">
+<xsl:sort select="count(language)" order="descending"/>
+<country>
+<xsl:attribute name="name">
+<xsl:value-of select="name"/>
+</xsl:attribute>
+<languages><xsl:value-of select="count(language)"/></languages>
+</country>
+</xsl:for-each>
+</countries>
+</xsl:template>
+</xsl:stylesheet>
+
+5.
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<countries>
+<xsl:for-each select="//country[not(@area > 40000 and not(city))]">
+<country>
+<xsl:attribute name="name">
+<xsl:value-of select="name"/>
+</xsl:attribute>
+<languages><xsl:value-of select="count(language)"/></languages>
+</country>
+</xsl:for-each>
+</countries>
+</xsl:template>
+</xsl:stylesheet>
