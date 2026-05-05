@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transformacio.xsl"?>
+<biblioteca>
+  <llibre>
+    <titol>El Quixot</titol>
+    <autor>Cervantes</autor>
+    <preu>25</preu>
+  </llibre>
+  <llibre>
+    <titol>1984</titol>
+    <autor>George Orwell</autor>
+    <preu>15</preu>
+  </llibre>
+</biblioteca>

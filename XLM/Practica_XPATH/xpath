@@ -1,0 +1,52 @@
+Exercici 1
+
+1.
+//title
+
+2.
+//department/chair/instructor/last_name
+
+3.
+//course[enrollment > 500]/title
+
+4.
+//department[course/prerequisites/pre = "CS106B"]/title
+
+5.
+//instructor[middle_initial]/last_name
+
+6.
+count(//course[contains(description, "Cross-listed")])
+
+7.
+sum(//department[@code="CS"]/course/enrollment) div count(//department[@code="CS"]/course)
+
+8.
+//course[contains(description, "system") and enrollment > 100]/instructors/instructor/last_name
+
+
+Exercici 2
+
+1.
+//country[count(city[population > 3000000]) >= 3]/name
+
+2.
+count(//country[language = "French" and language = "German"])
+
+3.
+//country[city/name = preceding::country/city/name or city/name = following::country/city/name]/name
+
+4.
+sum(//country[language = "Russian"]/count(language)) div count(//country[language = "Russian"])
+
+5.
+//country[contains(name, language)]/language
+
+6.
+//country[city/population > 7000000]/name
+
+7.
+//country[language and sum(language/@percentage) < 90]
+
+8.
+//country[language and not(language[@percentage >= 20])]
