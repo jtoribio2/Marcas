@@ -1,0 +1,236 @@
+/*
+1. Identificació dels tipus de dades en JSON
+a)
+Tipus de dades existents:
+- Objecte {}
+- Array []
+- String ""
+- Number
+
+"fruiteria" → objecte
+"fruita" i "verdura" → arrays
+"nom" → string
+"quantitat" → number
+
+b)
+Els dos fitxers JSON són correctes però NO són equivalents.
+
+El primer:
+- Té un objecte principal anomenat "fruiteria"
+
+El segon:
+- Té directament "fruita" i "verdura" a l'arrel
+
+La informació és semblant però l'estructura és diferent.
+
+c)
+Sí, es podria crear un atribut "categoria" per eliminar els objectes
+"fruita" i "verdura".
+
+Avantatges:
+- Estructura més simple
+- Més fàcil de recórrer
+- Millor per fer cerques o filtres
+
+Inconvenients:
+- Les categories no estan agrupades visualment
+*/
+
+{
+  "productes": [
+    {
+      "categoria": "fruita",
+      "nom": "Poma",
+      "quantitat": 10
+    },
+    {
+      "categoria": "fruita",
+      "nom": "Pera",
+      "quantitat": 20
+    },
+    {
+      "categoria": "fruita",
+      "nom": "Taronja",
+      "quantitat": 30
+    },
+    {
+      "categoria": "verdura",
+      "nom": "Enciam",
+      "quantitat": 80
+    },
+    {
+      "categoria": "verdura",
+      "nom": "Tomàquet",
+      "quantitat": 15
+    },
+    {
+      "categoria": "verdura",
+      "nom": "Cogombre",
+      "quantitat": 50
+    }
+  ]
+}
+
+/*
+2. Detecció i resolució d'errors
+Errors detectats:
+- Les claus temp, pressure, humidity, temp_min i temp_max necessiten cometes
+- pressure no pot anar entre {}
+- humidity no necessita []
+- S'han utilitzat ; en comptes de :
+- Falten comes
+- Alguns números estaven mal definits
+
+JSON corregit:
+*/
+
+{
+  "coord": {
+    "lon": -0.9,
+    "lat": 38.06
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds"
+    }
+  ],
+  "main": {
+    "temp": 288.15,
+    "pressure": 1012,
+    "humidity": 72,
+    "temp_min": 288.15,
+    "temp_max": 288.15
+  },
+  "dt": 1392661800,
+  "id": 2513076,
+  "name": "Bigastro",
+  "cod": 200
+}
+
+/*
+3a. equus.jsonc
+*/
+
+{
+  "cavalls": [
+    {
+      "nom": "Tro",
+      "identificacio": 1001,
+      "data_naixement": "2018-05-12",
+      "raca": "Àrab",
+      "constitucio": {
+        "alcada": 1.60,
+        "pes": 450
+      },
+      "historial_medic": [
+        {
+          "data": "2024-01-10",
+          "descripcio": "Vacunació anual"
+        },
+        {
+          "data": "2025-03-22",
+          "descripcio": "Revisió dental"
+        }
+      ]
+    },
+    {
+      "nom": "Llamp",
+      "identificacio": 1002,
+      "data_naixement": "2020-09-03",
+      "raca": "Frisó",
+      "constitucio": {
+        "alcada": 1.75,
+        "pes": 600
+      },
+      "historial_medic": [
+        {
+          "data": "2024-06-14",
+          "descripcio": "Lesió a la pota davantera"
+        },
+        {
+          "data": "2025-02-01",
+          "descripcio": "Control veterinari general"
+        }
+      ]
+    }
+  ]
+}
+
+/*
+3b. games.jsonc
+*/
+
+{
+  "games": [
+    {
+      "codi": "G001",
+      "nom": "Clash Royale",
+      "versio": "8.1.2",
+      "descripcio": "Joc d'estratègia en temps real.",
+      "idiomes": [
+        "Català",
+        "Castellà",
+        "Anglès"
+      ],
+      "imatges": [
+        "clash1.jpg",
+        "clash2.jpg",
+        "clash3.jpg"
+      ],
+      "comentaris": [
+        {
+          "usuari": {
+            "id": 1,
+            "avatar": "avatar1.png",
+            "nom": "Joel"
+          },
+          "comentari": "Molt divertit i competitiu."
+        },
+        {
+          "usuari": {
+            "id": 2,
+            "avatar": "avatar2.png",
+            "nom": "Maria"
+          },
+          "comentari": "Els gràfics estan molt bé."
+        }
+      ]
+    },
+    {
+      "codi": "G002",
+      "nom": "Minecraft",
+      "versio": "1.21",
+      "descripcio": "Joc de construcció i supervivència.",
+      "idiomes": [
+        "Castellà",
+        "Anglès",
+        "Francès"
+      ],
+      "imatges": [
+        "minecraft1.jpg",
+        "minecraft2.jpg",
+        "minecraft3.jpg"
+      ],
+      "comentaris": [
+        {
+          "usuari": {
+            "id": 3,
+            "avatar": "avatar3.png",
+            "nom": "David"
+          },
+          "comentari": "Pots construir qualsevol cosa."
+        },
+        {
+          "usuari": {
+            "id": 4,
+            "avatar": "avatar4.png",
+            "nom": "Laura"
+          },
+          "comentari": "Molt entretingut per jugar amb amics."
+        }
+      ]
+    }
+  ]
+}
