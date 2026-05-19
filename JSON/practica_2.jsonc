@@ -1,0 +1,159 @@
+/* EXERCICI 1 - ESQUEMA JSON monitors.jsd */
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Monitors",
+  "type": "object",
+
+  "properties": {
+    "monitors": {
+      "type": "object",
+
+      "properties": {
+        "monitor": {
+          "type": "array",
+
+          "minItems": 1,
+          "maxItems": 50,
+
+          "items": {
+            "type": "object",
+
+            "properties": {
+
+              /* Marca del monitor */
+              "brand": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 20
+              },
+
+              /* Tipus personalitzat per la mida */
+              "size": {
+                "$ref": "#/definitions/SizeType"
+              },
+
+              /* Ratio només pot ser 4:3 o 16:9 */
+              "ratio": {
+                "type": "string",
+                "enum": ["4:3", "16:9"]
+              },
+
+              /* Resolució amb format 1920x1080 */
+              "maxresolution": {
+                "type": "string",
+                "pattern": "^[0-9]{3,4}x[0-9]{3,4}$"
+              },
+
+              /* Data de llançament */
+              "launchDate": {
+                "type": "string",
+                "format": "date"
+              },
+
+              /* Feature pot aparèixer màxim 3 cops */
+              "feature": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+
+                "items": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 100
+                }
+              },
+
+              /* Preu amb atribut currency */
+              "price": {
+                "type": "object",
+
+                "properties": {
+                  "value": {
+                    "type": "integer",
+                    "minInclusive": 1,
+                    "maxInclusive": 5000
+                  },
+
+                  "currency": {
+                    "type": "string",
+                    "default": "DOL"
+                  }
+                },
+
+                "required": ["value"]
+              },
+
+              /* Tipus només LED, LCD o LEDHD */
+              "_type": {
+                "type": "string",
+                "enum": ["LED", "LCD", "LEDHD"]
+              },
+
+              /* Model format per majúscules i números */
+              "_modelNo": {
+                "type": "string",
+                "pattern": "^[A-Z0-9]{5,10}$"
+              }
+
+            },
+
+            /* Camps obligatoris */
+            "required": [
+              "brand",
+              "size",
+              "ratio",
+              "maxresolution",
+              "launchDate",
+              "feature",
+              "price",
+              "_type",
+              "_modelNo"
+            ]
+          }
+        }
+      },
+
+      "required": ["monitor"]
+    }
+  },
+
+  "required": ["monitors"],
+
+  /* Definició del nou tipus SizeType */
+  "definitions": {
+    "SizeType": {
+      "type": "number",
+      "minimum": 15.6,
+      "maximum": 27
+    }
+  }
+}
+
+
+/* EXERCICI 2 - RAONAMENT FINAL
+
+No tots els canvis són completament possibles en JSON normal,
+perquè JSON és només un format de dades i no valida restriccions.
+
+Les restriccions com:
+- minLength
+- maxLength
+- pattern
+- enum
+- minimum
+- maximum
+- required
+
+només es poden aplicar utilitzant JSON Schema.
+
+També hi ha limitacions:
+- JSON no té atributs reals com XML.
+- Els valors per defecte ("default") no s'apliquen automàticament,
+  només serveixen com informació per al validador.
+- No es pot obligar realment a que aparegui un atribut com en XML,
+  simplement es defineixen propietats dins dels objectes.
+
+Per tant, la majoria de restriccions sí que es poden simular
+amb JSON Schema, però no formen part del JSON estàndard.
+*/
