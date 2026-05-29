@@ -1,0 +1,131 @@
+{
+  // Ejercicio 1
+
+  "ejercicio1": {
+
+    // JSON válido
+
+    "json": {
+      "juicers": [
+        {
+          "name": "Orange Juice",
+          "description": "Natural orange juice",
+          "use-by-date": "2026-06-30",
+          "weight": 250,
+          "cost": 2.5,
+          "light": true
+        },
+        {
+          "name": "Apple Juice",
+          "description": "Fresh apple juice",
+          "use-by-date": "2026-07-15",
+          "weight": 200,
+          "cost": 1.8,
+          "light": false
+        },
+        {
+          "name": "Pineapple Juice",
+          "description": "Tropical pineapple juice",
+          "use-by-date": "2026-08-01",
+          "weight": 300,
+          "cost": 3.2,
+          "light": true
+        }
+      ]
+    },
+
+    // JSON Schema
+
+    "jsd": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+
+      "properties": {
+        "juicers": {
+          "type": "array",
+
+          "items": {
+            "type": "object",
+
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+
+              "description": {
+                "type": "string"
+              },
+
+              "use-by-date": {
+                "type": "string",
+                "format": "date"
+              },
+
+              "weight": {
+                "type": "integer",
+                "minimum": 2,
+                "maximum": 300
+              },
+
+              "cost": {
+                "type": "number"
+              },
+
+              "light": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // Modificaciones del XSD
+
+    "modificaciones": [
+      "use-by-date -> xs:date",
+      "cost -> xs:decimal",
+      "light -> xs:boolean",
+      "crear WeightType con rango 2-300"
+    ]
+  },
+
+  // Ejercicio 2
+
+  "ejercicio2": {
+
+    // XML válido
+
+    "alumne.xml": [
+      "<alumne>",
+      "   <dades_personals data_naixement='1995-06-07' dni='12345678A'>",
+      "      <nom>Joel</nom>",
+      "      <cognoms>Toribio</cognoms>",
+      "      <e-mail>joel@gmail.com</e-mail>",
+      "      <telefon>666111222</telefon>",
+      "   </dades_personals>",
+
+      "   <dades_academiques data_matricula='2025-09-01' num_matricula='DAW001'>",
+      "      <estudis>DAW</estudis>",
+      "      <curs>2</curs>",
+      "      <repetidor>false</repetidor>",
+      "   </dades_academiques>",
+      "</alumne>"
+    ],
+
+    // Cambios pedidos en el esquema
+
+    "modificaciones": [
+      "añadir adreca",
+      "telefono con atributo tipus (mobil/fix)",
+      "telefono maxOccurs=3",
+      "data_matricula opcional",
+      "data_matricula tipo xs:date",
+      "data_matricula default=2012-09-01",
+      "crear tipo cadena50",
+      "email con pattern",
+      "repetidor xs:boolean",
+      "numero direccion positivo hasta 1500"
+    ]
+  }
+}
